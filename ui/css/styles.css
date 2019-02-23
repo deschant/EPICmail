@@ -106,6 +106,30 @@ body {
   font-size: 0.9rem;
 }
 
+#signin .links a:hover {
+  color: var(--btn-hover-color);
+  text-decoration: underline;
+}
+
+#signin .or {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1.2rem;
+  align-items: center;
+}
+
+#signin .or .bar {
+  flex: auto;
+  border: none;
+  height: 1px;
+  background: var(--secondary-bg-color);
+}
+
+#signin .or span {
+  color: var(--secondary-bg-color);
+  padding: 0 0.8rem;
+}
+
 /* Button */
 .primary-btn {
   padding: .7rem 1rem;
