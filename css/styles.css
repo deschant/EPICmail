@@ -82,6 +82,24 @@ html, body {
   font-weight: 500;
 }
 
+#email-input:not(:last-child) {
+  border-right: 0 !important;
+}
+
+.input-group {
+  display: flex;
+}
+
+#email-suffix {
+  border: 2px solid var(--main-bg-color);
+  border-left: none;
+  height: 2.5rem;
+  padding: 0.5rem;
+  background: var(--main-bg-color);
+  color: #fff;
+  border-radius: 0 2px 2px 0;
+}
+
 #signin .text-input {
   margin-bottom: 1.3rem;
   width: 100%;
