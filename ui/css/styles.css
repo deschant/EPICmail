@@ -50,6 +50,50 @@ html, body {
   height: 100vh;
 }
 
+.logo {
+  margin-bottom: 1vh;
+  font-size: 6rem;
+  font-weight: 600;
+}
+
+.logo > #epic-text {
+  font-family: Kalam, sans-serif;
+  color: var(--main-bg-color);
+}
+
+.form-group {
+  width: 100%;
+  padding-bottom: 0.5rem;
+}
+
+form label {
+  font-size: 0.9 rem;
+  line-height: 2rem;
+  font-weight: 500;
+}
+
+.text-input {
+  margin-bottom: 1.3rem;
+  width: 100%;
+  border-radius: 4px;
+  border: 2px solid var(--main-bg-color);
+  padding: .5rem 1rem;
+  line-height: 1.3rem;
+}
+
+.links a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.links a:hover {
+  color: var(--btn-hover-color);
+  text-decoration: underline;
+}
+
 /* Sign in CSS */
 #signin {
   display: flex;
@@ -58,55 +102,7 @@ html, body {
   align-items: center;
   width: 80%;
   padding: 1rem;
-}
-
-#signin .form-group {
-  width: 100%;
-  padding-bottom: 0.5rem;
-}
-
-#signin .logo {
-  margin-bottom: 1vh;
-  font-size: 6rem;
-  font-weight: 600;
-}
-
-#signin .logo > #epic-text {
-  font-family: Kalam, sans-serif;
-  color: var(--main-bg-color);
-}
-
-#signin label {
-  font-size: 0.9 rem;
-  line-height: 2rem;
-  font-weight: 500;
-}
-
-#email-input:not(:last-child) {
-  border-right: 0 !important;
-}
-
-.input-group {
-  display: flex;
-}
-
-#email-suffix {
-  border: 2px solid var(--main-bg-color);
-  border-left: none;
-  height: 2.5rem;
-  padding: 0.5rem;
-  background: var(--main-bg-color);
-  color: #fff;
-  border-radius: 0 2px 2px 0;
-}
-
-#signin .text-input {
-  margin-bottom: 1.3rem;
-  width: 100%;
-  border-radius: 2px;
-  border: 2px solid var(--main-bg-color);
-  padding: .5rem 1rem;
-  line-height: 1.3rem;
+  animation: animateForms cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards;
 }
 
 #signin .primary-btn {
@@ -119,18 +115,8 @@ html, body {
   width: 100%;
 }
 
-#signin > .links a {
-  display: block;
-  color: inherit;
-  text-decoration: none;
-  margin-bottom: 1rem;
-  text-align: center;
-  font-size: 0.9rem;
-}
-
-#signin > .links a:hover {
-  color: var(--btn-hover-color);
-  text-decoration: underline;
+#signin .links a {
+  margin-bottom: 1rem;  
 }
 
 #signin .or {
@@ -155,7 +141,7 @@ html, body {
 #signin-footer {
   color: var(--secondary-bg-color);
   text-align: center;
-  font-size: 0.8rem;
+  font-size: .8rem;
   max-width: 80%;
   padding-top: 1rem;
 }
@@ -164,13 +150,86 @@ html, body {
   color: var(--btn-hover-color);
 }
 
+/* Sign up */
+#signup {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  padding: 1rem;
+  animation: animateForms cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards;
+}
+
+#signup #user-names {
+  display: flex;
+}
+
+#signup #user-names #fN {
+  margin-right: .5rem;
+}
+
+#signup #user-names #lN {
+  margin-left: .5rem;
+}
+
+#signup .primary-btn {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+#email-input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.input-group {
+  display: flex;
+}
+
+#email-suffix {
+  border: 2px solid var(--main-bg-color);
+  border-left: none;
+  height: 2.5rem;
+  padding: 0.5rem;
+  background: var(--main-bg-color);
+  color: #fff;
+  border-radius: 0 4px 4px 0;
+}
+
+.country-prepend {
+  display: flex;
+}
+
+.country-prepend #phone-input {
+  flex: 1;
+  border-left: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.country-prepend select {
+  width: 4rem;
+  border: 2px solid var(--main-bg-color);
+  border-right: none;
+  height: 2.5rem;
+  background: var(--main-bg-color);
+  color: #fff;
+  border-radius: 4px 0 0 4px;
+}
+
+.country-prepend select option {
+  background: #fff;
+  color: var(--secondary-bg-color);
+}
+
 /* Button */
 .primary-btn {
   padding: .7rem 1rem;
   height: 2.7rem;
   display: block;
   border: 0;
-  border-radius: 2px;
+  border-radius: 4px;
   font-weight: 500;
   font-size: 1.2rem;
   background: var(--main-bg-color);
@@ -190,7 +249,7 @@ html, body {
   height: 2.7rem;
   display: block;
   border: 1px solid var(--secondary-bg-color);
-  border-radius: 2px;
+  border-radius: 4px;
   font-weight: 500;
   background: none;
   color: inherit;
@@ -229,9 +288,23 @@ html, body {
     justify-content: start;
   }
 
-  #signin .logo {
+  .logo {
     margin-bottom: 1vh;
-    font-size: 3rem;
+    margin-top: 10vh;
+    font-size: 4rem;
     font-weight: 600;
   }
+
+  #signup, #signin {
+    width: 95%;
+  }
+}
+
+/* Animations */
+@keyframes animateForms {
+  0%   { opacity: 0.2; }
+  25%  { opacity: 0.4; }
+  50%  { opacity: 0.6; }
+  75%  { opacity: 0.8; }
+  100% { opacity: 1; }
 }
