@@ -81,10 +81,23 @@ form label {
   line-height: 1.3rem;
 }
 
+.links a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.links a:hover {
+  color: var(--btn-hover-color);
+  text-decoration: underline;
+}
+
 /* Sign in CSS */
 #signin {
-  /* display: none; */
-  display: flex;
+  display: none;
+  /* display: flex; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -102,18 +115,8 @@ form label {
   width: 100%;
 }
 
-#signin > .links a {
-  display: block;
-  color: inherit;
-  text-decoration: none;
-  margin-bottom: 1rem;
-  text-align: center;
-  font-size: 0.9rem;
-}
-
-#signin > .links a:hover {
-  color: var(--btn-hover-color);
-  text-decoration: underline;
+#signin .links a {
+  margin-bottom: 1rem;  
 }
 
 #signin .or {
@@ -149,8 +152,8 @@ form label {
 
 /* Sign up */
 #signup {
-  display: none;
-  /* display: flex; */
+  /* display: none; */
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -172,6 +175,7 @@ form label {
 
 #signup .primary-btn {
   width: 100%;
+  margin-bottom: 1rem;
 }
 
 #email-input {
