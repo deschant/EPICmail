@@ -96,13 +96,13 @@ form label {
 
 /* Sign in CSS */
 #signin {
-  display: none;
-  /* display: flex; */
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 80%;
   padding: 1rem;
+  animation: animateForms cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards;
 }
 
 #signin .primary-btn {
@@ -152,13 +152,13 @@ form label {
 
 /* Sign up */
 #signup {
-  /* display: none; */
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 80%;
   padding: 1rem;
+  animation: animateForms cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards;
 }
 
 #signup #user-names {
@@ -298,4 +298,13 @@ form label {
   #signup, #signin {
     width: 95%;
   }
+}
+
+/* Animations */
+@keyframes animateForms {
+  0%   { opacity: 0.2; }
+  25%  { opacity: 0.4; }
+  50%  { opacity: 0.6; }
+  75%  { opacity: 0.8; }
+  100% { opacity: 1; }
 }
