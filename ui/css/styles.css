@@ -75,7 +75,7 @@ form label {
 .text-input {
   margin-bottom: 1.3rem;
   width: 100%;
-  border-radius: 2px;
+  border-radius: 4px;
   border: 2px solid var(--main-bg-color);
   padding: .5rem 1rem;
   line-height: 1.3rem;
@@ -83,31 +83,13 @@ form label {
 
 /* Sign in CSS */
 #signin {
-  display: none;
-  /* display: flex; */
+  /* display: none; */
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 80%;
   padding: 1rem;
-}
-
-#email-input:not(:last-child) {
-  border-right: 0 !important;
-}
-
-.input-group {
-  display: flex;
-}
-
-#email-suffix {
-  border: 2px solid var(--main-bg-color);
-  border-left: none;
-  height: 2.5rem;
-  padding: 0.5rem;
-  background: var(--main-bg-color);
-  color: #fff;
-  border-radius: 0 2px 2px 0;
 }
 
 #signin .primary-btn {
@@ -167,7 +149,8 @@ form label {
 
 /* Sign up */
 #signup {
-  display: flex;
+  display: none;
+  /* display: flex; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -191,22 +174,44 @@ form label {
   width: 100%;
 }
 
+#email-input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.input-group {
+  display: flex;
+}
+
+#email-suffix {
+  border: 2px solid var(--main-bg-color);
+  border-left: none;
+  height: 2.5rem;
+  padding: 0.5rem;
+  background: var(--main-bg-color);
+  color: #fff;
+  border-radius: 0 4px 4px 0;
+}
+
 .country-prepend {
   display: flex;
 }
 
 .country-prepend #phone-input {
   flex: 1;
+  border-left: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .country-prepend select {
-  width: 7rem;
+  width: 4rem;
   border: 2px solid var(--main-bg-color);
   border-right: none;
   height: 2.5rem;
   background: var(--main-bg-color);
   color: #fff;
-  border-radius: 0px 0 0 2px;
+  border-radius: 4px 0 0 4px;
 }
 
 .country-prepend select option {
@@ -220,7 +225,7 @@ form label {
   height: 2.7rem;
   display: block;
   border: 0;
-  border-radius: 2px;
+  border-radius: 4px;
   font-weight: 500;
   font-size: 1.2rem;
   background: var(--main-bg-color);
@@ -240,7 +245,7 @@ form label {
   height: 2.7rem;
   display: block;
   border: 1px solid var(--secondary-bg-color);
-  border-radius: 2px;
+  border-radius: 4px;
   font-weight: 500;
   background: none;
   color: inherit;
@@ -279,9 +284,14 @@ form label {
     justify-content: start;
   }
 
-  #signin .logo {
+  .logo {
     margin-bottom: 1vh;
-    font-size: 3rem;
+    margin-top: 10vh;
+    font-size: 4rem;
     font-weight: 600;
+  }
+
+  #signup, #signin {
+    width: 95%;
   }
 }
