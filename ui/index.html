@@ -28,13 +28,12 @@
         <div id="signin">
     
             <form class="form-group">
-    
               <div class="input-group">
-                <input type="email" class="text-input" placeholder="Enter your email address">
+                <input required type="email" class="text-input" placeholder="Enter your email address">
               </div>
     
               <div>
-                <input type="password" class="text-input" placeholder="Enter your password">
+                <input required type="password" class="text-input" placeholder="Enter your password">
               </div>
 
               <button type="submit" class="primary-btn">Login</button>
@@ -65,14 +64,12 @@
             <form class="form-group">
 
               <div id="user-names">
-
-                  <input id="fN" type="text" class="text-input" placeholder="First Name">
-                  <input id="lN" type="text" class="text-input" placeholder="Last Name">
-
+                  <input required id="fN" type="text" class="text-input" placeholder="First Name">
+                  <input required id="lN" type="text" class="text-input" placeholder="Last Name">
               </div>
     
               <div class="input-group">
-                <input type="email" id="email-input" class="text-input" placeholder="Email address">
+                <input required type="text" id="email-input" class="text-input" placeholder="Email address">
                 <span id="email-suffix">@epic.mail</span>
               </div>
               
@@ -299,18 +296,18 @@
                     <option data-countryCode="ZW" value="263">+263</option>
                   </optgroup>
                 </select>
-                <input id="phone-input" type="text" class="text-input" placeholder="Phone Number">
+                <input required id="phone-input" type="text" class="text-input" placeholder="Phone Number">
               </div>
     
               <div>
-                <input type="password" class="text-input" placeholder="Pick a password">
+                <input required id="password" type="password" class="text-input" placeholder="Password">
               </div>
 
               <div>
-                <input type="password" class="text-input" placeholder="Enter password again to confirm">
+                <input required id="confirm-password" type="password" class="text-input" placeholder="Confirm password">
               </div>
 
-              <button type="submit" class="primary-btn">Signup</button>
+              <button id="signup-btn" type="submit" class="primary-btn">Signup</button>
 
               <div class="links">
                 <a href="#" onclick="toggleForms('signup')">Sign in instead ?</a>
