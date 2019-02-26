@@ -107,6 +107,10 @@ html, body {
   animation: animateForms cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards;
 }
 
+.red-text {
+  color: red;
+}
+
 /* Sign in CSS */
 .form .primary-btn {
   width: 100%;
