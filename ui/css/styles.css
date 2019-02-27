@@ -20,19 +20,15 @@ html, body {
   color: var(--secondary-bg-color);
 }
 
-#wrapper {
+.wrapper {
   display: flex;
 }
 
-#left {
+.left {
   flex: 1;
 }
 
-#art {
-  display: flex;
-}
-
-#art {
+.art {
   display: flex;
   justify-content: center;
   background: url("../assets/undraw_emails.png") no-repeat center center / cover;
@@ -41,7 +37,7 @@ html, body {
   text-align: center;
 }
 
-#right {
+.right {
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -66,8 +62,8 @@ html, body {
   padding-bottom: 0.5rem;
 }
 
-form label {
-  font-size: 0.9 rem;
+.form-group label {
+  font-size: 1rem;
   line-height: 2rem;
   font-weight: 500;
 }
@@ -101,8 +97,7 @@ form label {
   text-decoration: underline;
 }
 
-/* Sign in CSS */
-#signin {
+.form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -112,11 +107,16 @@ form label {
   animation: animateForms cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards;
 }
 
-#signin .primary-btn {
+.red-text {
+  color: red;
+}
+
+/* Sign in CSS */
+.form .primary-btn {
   width: 100%;
 }
 
-#signin .secondary-btn,
+.form .secondary-btn,
 .or,
 .links {
   width: 100%;
@@ -160,12 +160,6 @@ form label {
 /* Sign up */
 #signup {
   display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
-  padding: 1rem;
-  animation: animateForms cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards;
 }
 
 #signup #user-names {
@@ -274,11 +268,11 @@ form label {
 
 /* Media Queries */
 @media(min-width: 1200px) {
-  #right {
+  .right {
     flex: 4;
   }
 
-  #left {
+  .left {
     flex: 6;
   }
 }
@@ -288,11 +282,11 @@ form label {
     overflow: auto;
   }
 
-  #left {
+  .left {
     display: none;
   }
 
-  #right {
+  .right {
     justify-content: start;
   }
 
