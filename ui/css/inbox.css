@@ -1,0 +1,68 @@
+div {
+  border: 1px solid grey;
+}
+
+/* header */
+
+.wrapper {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  flex-direction: column;
+}
+
+.mail-nav {
+  display: flex;
+  flex-direction: row;
+  height: 60px;
+  padding: .2rem;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 60px;
+}
+
+.logo {
+  margin: 0;
+}
+
+.mail-nav .logo {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-right: auto;
+}
+
+.mail-nav-items {
+  margin-left: auto;
+  width: 10rem;
+}
+
+.mail-nav-items ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  font-size: 2rem;
+}
+
+.mail-nav-items ul li a {
+  color: var(--main-bg-color);
+}
+
+.mail-nav-items .icon svg {
+  margin-bottom: .3rem;
+}
+
+.image-cropper {
+  width: 3rem;
+  height: 3rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  border: none;
+}
+
+.image-cropper > img {
+  display: inline;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+}
