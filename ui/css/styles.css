@@ -4,6 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 :root {
@@ -264,6 +265,10 @@ html, body {
 .secondary-btn:hover {
   border-color: var(--btn-hover-color);
   color: var(--btn-hover-color);
+}
+
+.scrollable-y {
+  overflow-y: auto;
 }
 
 /* Media Queries */
