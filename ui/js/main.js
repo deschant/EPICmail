@@ -53,3 +53,20 @@ const isSignupForm = () => {
     $email.value = $firstName.value + $lastName.value;
   }
 };
+
+// Handle sidebar toggling
+const toggleSidebar = () => {
+  const sidebar = document.getElementById('sidebar');
+  const sidebarBtn = document.getElementById('sidebar-toggle');
+
+  if (sidebar.classList.contains('is-collapsed')) {
+    sidebar.classList.replace('is-collapsed', 'is-full-width')
+    sidebarBtn.innerHTML = '<i class="fas fa-angle-double-left"></i>';
+  } else if (sidebar.classList.contains('is-full-width')) {
+    sidebar.classList.replace('is-full-width', 'is-collapsed')
+    sidebarBtn.innerHTML = '<i class="fas fa-angle-double-right"></i>';
+  } else {
+    sidebar.classList.add('is-collapsed');
+    sidebarBtn.innerHTML = '<i class="fas fa-angle-double-right"></i>';
+  }
+};

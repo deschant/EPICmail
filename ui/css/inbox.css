@@ -11,6 +11,13 @@
   transition: color .5s;
 }
 
+.truncate {
+  width: 90%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 /* header */
 
 .wrapper {
@@ -43,13 +50,6 @@
 
 .mail-nav-items {
   margin-left: auto;
-  width: 10rem;
-}
-
-.mail-nav-items ul {
-  display: flex;
-  justify-content: space-between;
-  font-size: 2rem;
 }
 
 .icon svg {
@@ -85,9 +85,6 @@
 
 .mail-area-nav-container {
   border-top: 2px solid var(--secondary-bg-color);
-  border-bottom: 2px solid var(--secondary-bg-color);
-  border-radius: 4px;
-  margin-right: .5rem;
 }
 
 .mail-area-nav-container ul {
@@ -95,19 +92,20 @@
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
-  margin-right: .5rem;
-  padding: .5rem;
+  padding: 1rem 0 1rem 0;
   font-size: 2rem;
+  margin-right: .5rem;
+}
+
+.mail-area-nav li {
+  margin-bottom: 1rem;
 }
 
 .mail-area {
-  margin-left: .5rem;
-  padding: 1rem;
   width: 100%;
   height: 100vh;
   border-top: 2px solid var(--secondary-bg-color);
-  border-bottom: 2px solid var(--secondary-bg-color);
-  border-radius: 4px;
+  margin-left: .5rem;
 }
 
 .mail-list {
@@ -118,8 +116,7 @@
   display: flex;
   flex-direction: row;
   height: 2.5rem;
-  margin-bottom: 1rem;
-  border: 2px solid var(--main-bg-color);
+  /* margin-bottom: 1rem; */
   border-radius: 4px;
 }
 
@@ -134,8 +131,8 @@
   text-decoration: none; 
 }
 
-.mail-list .mail-item a:hover {
-  box-shadow: 0 10px 6px -6px var(--main-bg-color);
+.mail-list .mail-item:hover {
+  border: 2px solid var(--main-bg-color);
   transition: all .5s;
 }
 
@@ -152,7 +149,7 @@
 }
 
 #mail-delete:hover {
-  color: var(--main-bg-color);
+  color: red;
   transition: color .5s;
 }
 
@@ -181,8 +178,8 @@
   flex-direction: column;
 }
 
-ul li:hover > ul,
-ul li ul:hover {
+.mail-nav-items:hover .dropdown,
+.dropdown:hover {
   visibility: visible;
   opacity: 1;
   display: flex;
@@ -212,3 +209,100 @@ ul li ul:hover {
   color: inherit;
   font-size: 1rem;
 }
+
+.float {
+  display: none;
+}
+
+/* Mobile responsiveness */
+@media(max-width: 768px) {
+
+  .mail-nav {
+    height: 40px;
+    padding: .2rem;
+    line-height: 40px;
+    margin: .5rem .5rem 0 .5rem;
+  }
+
+  .mail-nav .logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-right: auto;
+  }
+
+  .icon svg {
+    margin-bottom: 0rem;
+  }
+  
+  .image-cropper {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  #page-title {
+    font-size: 1.8rem;
+  }
+
+  /* Sidebar */
+  
+  /* Aboslute button */
+  .float {
+    display: block;
+    position: fixed;
+    width: 3rem;
+    height: 3rem;
+    bottom: 1rem;
+    left: 1rem;
+    background-color: var(--main-bg-color);
+    color:#fff;
+    border-radius: 50%;
+    text-align: center;
+    border: none;
+    font-size: 1.5rem;
+    z-index: 600;
+  }
+
+  .sidebar {
+    z-index: 100;
+  }
+
+  .sidebar.is-collapsed {
+    display: none;
+  }
+
+  .sidebar.is-full-width {
+    display: block;
+  }
+
+  .mail-list .mail-item {
+    height: 3.5rem;
+  }
+
+  #mail-right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #mail-left {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+  }
+
+  #mail-sender, #mail-timestamp {
+    margin-right: 0;
+  }
+  
+  #mail-delete {
+    font-size: 1.3rem;
+  }
+
+  .truncate {
+    width: 75%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+}
+  
