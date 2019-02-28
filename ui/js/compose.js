@@ -1,2 +1,6 @@
 const container = document.getElementById('mail-editor');
-const editor = new Quill(container, { theme: 'snow' });
+const quillOptions = {
+  theme: 'snow',
+  placeholder: 'Start crafting your epic mail here'
+};
+const editor = new Quill(container, quillOptions);
