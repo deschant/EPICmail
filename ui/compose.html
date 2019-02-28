@@ -59,17 +59,23 @@
       </button>
 
       <div class="mail-area">
-        
-        <div class="mail-editor-container">
-          <div id="mail-editor" class="editor"></div>
-        </div>
+        <form class="mail">
+          <div class="mail-info">
+            <input type="email" name="to" id="to" placeholder="To: brucewayne@epic.mail" class="text-input">
+            <input type="text" name="subject" id="subject" placeholder="Subject: Welcome, master" class="text-input">
+          </div>
+          
+          <div class="mail-editor-container">
+            <div id="mail-editor" class="editor"></div>
+          </div>
+  
+          <div class="mail-actions">
+            <a href="#" id="reply-mail" onclick="sendMail()" class="primary-btn" type="submit"><i class="fas fa-check"></i> Send</a>
+            <a href="#" id="reply-mail" onclick="sendMail(true)" class="primary-btn"><i class='fab fa-firstdraft'></i> Save Draft</a>
+            <a href="compose.html" id="delete-mail" class="primary-btn"><i class='fas fa-trash-alt'></i> Delete</a>
+          </div>
 
-        <div class="mail-actions">
-          <a href="#" id="reply-mail" class="primary-btn"><i class="fas fa-check"></i> Send</a>
-          <a href="#" id="reply-mail" class="primary-btn"><i class='fab fa-firstdraft'></i> Save Draft</a>
-          <a href="#" id="delete-mail" class="primary-btn"><i class='fas fa-trash-alt'></i> Delete</a>
-        </div>
-
+        </form>
       </div>
 
     </div>

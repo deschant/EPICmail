@@ -3,15 +3,17 @@
 }
 
 .mail-editor-container {
-  height: 70%;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
+}
+
+.mail .mail-info {
+  width: 20rem;
 }
 
 /* Mobile responsiveness */
 @media(max-width: 768px) {
   .mail-editor-container {
     height: 60%;
-    margin-bottom: 5rem;
   }
 
   .mail-actions {
@@ -22,5 +24,9 @@
     font-size: 1rem;
     display: block;
     margin: 1rem 1rem 1rem 1rem;
+  }
+
+  .mail .mail-info {
+    width: inherit;
   }
 }
