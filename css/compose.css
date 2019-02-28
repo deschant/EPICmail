@@ -1,6 +1,26 @@
 .mail-actions {
   margin-bottom: 1rem;
 }
+
 .mail-editor-container {
-  height: 500px;
+  height: 70%;
+  margin-bottom: 4rem;
+}
+
+/* Mobile responsiveness */
+@media(max-width: 768px) {
+  .mail-editor-container {
+    height: 60%;
+    margin-bottom: 5rem;
+  }
+
+  .mail-actions {
+    margin-bottom: .5rem;
+  }
+
+  .mail-actions a {
+    font-size: 1rem;
+    display: block;
+    margin: 1rem 1rem 1rem 1rem;
+  }
 }
