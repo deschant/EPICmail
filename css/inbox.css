@@ -155,3 +155,60 @@
   color: var(--main-bg-color);
   transition: color .5s;
 }
+
+/* Dropdown menu */
+.dropdown li {
+  display: block;
+  transition-duration: 0.5s;
+}
+
+.dropdown li:hover {
+  cursor: pointer;
+}
+
+.dropdown {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  display: none;
+  border: 2px solid var(--secondary-bg-color);
+  border-radius: 4px;
+  margin-top: .5rem;
+  margin-right: 1rem;
+  background: #fff;
+  width: 15rem;
+  flex-direction: column;
+}
+
+ul li:hover > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: flex;
+  transition: all 0.5s ease;
+}
+
+/* .dropdown .dropdown-item {
+  clear: both;
+  width: 100%;
+} */
+
+.dropdown li {
+  text-align: left;
+  padding-left: 1rem;
+}
+
+.dropdown li:hover {
+  background: var(--main-bg-color);
+  color: #fff;
+}
+
+.dropdown li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+  font-size: 1rem;
+}
