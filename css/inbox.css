@@ -1,7 +1,3 @@
-/* div, li {
-  border: 1px solid grey;
-} */
-
 .icon {
   color: inherit;
 }
@@ -145,7 +141,7 @@
 }
 
 #mail-sender, #mail-timestamp {
-  margin-right: 2rem;
+  margin-right: 1rem;
 }
 
 #mail-delete:hover {
