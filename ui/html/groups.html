@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="../css/inbox.css">
   <link rel="stylesheet" href="../css/groups.css">
   <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
-  <script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
   <div class="wrapper">
@@ -63,21 +62,29 @@
           <div class="group-list">
             <h3 class="title">My Groups</h3>
             <ul>
-              <li><a href="#" class="secondary-btn">Avengers(2)</a></li>
-              <!-- Modal containing list of group members-->
-              <li><a href="#" class="secondary-btn">Avengers(2)</a></li>
-              <!-- Modal containing list of group members-->
-              <li><a href="#" class="secondary-btn">Avengers(2)</a></li>
-              <!-- Modal containing list of group members-->
-              <li><a href="#" class="secondary-btn">Avengers(2)</a></li>
-              <!-- Modal containing list of group members-->
+              <li>
+                <a href="#" onclick="showGroupMembersModal()" class="secondary-btn">Avengers(2)</a>
+              </li>
             </ul>
+            <div class="modal-overlay closed" id="modal-overlay"></div>
+            <div class="modal closed" id="modal">
+              <button class="close-button" id="close-button">Done <i class="fas fa-check"></i></button>
+              <div class="modal-guts">
+                <h1 id="gN" class="title">
+                  <!-- Group Name -->
+                </h1>
+                <ul id="gMbrs">
+                  <li>Barry Allen</li>
+                  <li>Bruce Wayne</li>
+                </ul>
+              </div>
+            </div>
           </div>
 
           <div class="new-group">
             <h3 class="title">New Group</h3>
             <form action="">
-              <label for="group-name">Name</label>
+              <label for="group-name" class="label">Name</label>
               <input class="text-input" type="text" name="groupName" id="group-name" placeholder="Justice League" required>
               <label for="group-members">Members</label>
               <textarea class="text-input" name="groupMembers" id="group-members" cols="30" rows="10" placeholder="theflash@epic.mail;brucewayne@epic.mail;wonderwoman@epic.mail" required></textarea>
@@ -93,5 +100,6 @@
 
 
   </div>
+  <script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
