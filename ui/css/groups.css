@@ -48,4 +48,10 @@
   .groups {
     flex-direction: column;
   }
+
+  .group-list, 
+  .new-group {
+    margin: 0 0 1rem ;
+    padding: 1rem;
+  }
 }
