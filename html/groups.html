@@ -15,7 +15,7 @@
 </head>
 <body>
   <div class="wrapper">
-    <div class="mail-nav">
+    <header class="mail-nav">
 
       <div class="logo">
           <span id="epic-text">Epic</span><span id="mail-text">.Mail</span>
@@ -38,7 +38,7 @@
         
       </div>
 
-    </div>
+    </header>
     
     <div class="mails">
 
@@ -63,9 +63,13 @@
           <div class="group-list">
             <h3 class="title">My Groups</h3>
             <ul>
-              <li><a href="#" class="secondary-btn">Avengers - {{}} member(s)</a></li>
+              <li><a href="#" class="secondary-btn">Avengers(2)</a></li>
               <!-- Modal containing list of group members-->
-              <li><a href="#" class="secondary-btn">Avengers - {{}} member(s)</a></li>
+              <li><a href="#" class="secondary-btn">Avengers(2)</a></li>
+              <!-- Modal containing list of group members-->
+              <li><a href="#" class="secondary-btn">Avengers(2)</a></li>
+              <!-- Modal containing list of group members-->
+              <li><a href="#" class="secondary-btn">Avengers(2)</a></li>
               <!-- Modal containing list of group members-->
             </ul>
           </div>
@@ -73,9 +77,11 @@
           <div class="new-group">
             <h3 class="title">New Group</h3>
             <form action="">
-              <input type="text" name="groupName" id="group-name" placeholder="group name e.g: Justice League">
-              <textarea name="groupMembers" id="group-members" cols="30" rows="10" placeholder="group member(s) e.g: theflash@epic.mail;brucewayne@epic.mail;wonderwoman@epic.mail"></textarea>
-              <button type="submit" class="primary-btn">Save Group</button>
+              <label for="group-name">Name</label>
+              <input class="text-input" type="text" name="groupName" id="group-name" placeholder="Justice League" required>
+              <label for="group-members">Members</label>
+              <textarea class="text-input" name="groupMembers" id="group-members" cols="30" rows="10" placeholder="theflash@epic.mail;brucewayne@epic.mail;wonderwoman@epic.mail" required></textarea>
+              <button type="submit" class="primary-btn">Save</button>
             </form>
           </div>
 
