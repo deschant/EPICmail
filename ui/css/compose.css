@@ -10,6 +10,14 @@
   width: 20rem;
 }
 
+.mail-info .text-input {
+  border-color: var(--secondary-bg-color);
+}
+
+#mail-editor {
+  height: 90vh;
+}
+
 /* Mobile responsiveness */
 @media(max-width: 768px) {
   .mail-editor-container {
