@@ -60,12 +60,17 @@
         <div class="groups">
 
           <div class="group-list">
+
             <h3 class="title">My Groups</h3>
             <ul>
               <li>
-                <a href="#" onclick="showGroupMembersModal()" class="secondary-btn">Avengers(2)</a>
+                <a href="#" onclick="showGroupMembersModal(1234)" class="secondary-btn">Avengers(2)</a>
+              </li>
+              <li>
+                  <a href="#" onclick="showGroupMembersModal(4567)" class="secondary-btn">Justice League(2)</a>
               </li>
             </ul>
+
             <div class="modal-overlay closed" id="modal-overlay"></div>
             <div class="modal closed" id="modal">
               <button class="close-button" id="close-button">Done <i class="fas fa-check"></i></button>
@@ -79,6 +84,7 @@
                 </ul>
               </div>
             </div>
+
           </div>
 
           <div class="new-group">
