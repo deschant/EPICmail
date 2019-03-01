@@ -70,3 +70,27 @@ const toggleSidebar = () => {
     sidebarBtn.innerHTML = '<i class="fas fa-angle-double-right"></i>';
   }
 };
+
+// Closing modal
+const modal = document.querySelector("#modal");
+const modalOverlay = document.querySelector("#modal-overlay");
+const closeButton = document.querySelector("#close-button");
+closeButton.addEventListener("click", () => {
+  modal.classList.toggle("closed");
+  modalOverlay.classList.toggle("closed");
+});
+
+const showGroupMembersModal = (groupId) => {
+  // Modal
+  const modal = document.querySelector("#modal");
+  const modalOverlay = document.querySelector("#modal-overlay");
+
+  //@TODO Fecth group name, members from api
+
+  // Insert content inside modal
+  document.getElementById('gN').innerHTML = "Avengers";
+  // For each group member:
+  document.getElementById('gMbrs').innerHTML += "<li>Peter Parker</li>"
+  modal.classList.toggle("closed");
+  modalOverlay.classList.toggle("closed");
+};
