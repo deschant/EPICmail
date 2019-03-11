@@ -15,7 +15,10 @@
 }
 
 #mail-editor {
-  height: 90vh;
+  height: 70vh;
+  width: 100%;
+  border-color: var(--secondary-bg-color);
+  margin-bottom: 0;
 }
 
 /* Mobile responsiveness */
