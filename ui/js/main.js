@@ -75,11 +75,12 @@ const toggleSidebar = () => {
 const modal = document.querySelector("#modal");
 const modalOverlay = document.querySelector("#modal-overlay");
 const closeButton = document.querySelector("#close-button");
-closeButton.addEventListener("click", () => {
-  modal.classList.toggle("closed");
-  modalOverlay.classList.toggle("closed");
-});
-
+if (closeButton) {
+  closeButton.addEventListener("click", () => {
+    modal.classList.toggle("closed");
+    modalOverlay.classList.toggle("closed");
+  });
+}
 const showGroupMembersModal = (groupId) => {
   // Modal
   const modal = document.querySelector("#modal");
@@ -94,3 +95,12 @@ const showGroupMembersModal = (groupId) => {
   modal.classList.toggle("closed");
   modalOverlay.classList.toggle("closed");
 };
+
+// Handle login form submission
+const loginForm = document.getElementById('login-form');
+if (loginForm) {
+  loginForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    window.location.href = 'http://localhost:5500/ui/html/inbox.html';
+  });
+}
