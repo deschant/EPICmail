@@ -101,6 +101,6 @@ const loginForm = document.getElementById('login-form');
 if (loginForm) {
   loginForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    window.location.href = 'http://localhost:5500/ui/html/inbox.html';
+    window.location.href = 'https://deschant.github.io/ui/html/inbox.html';
   });
 }
